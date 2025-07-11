@@ -7,7 +7,7 @@ G="\e[32m"
 Y="\e[33m"
 
 Logs_Folder="/var/log/shellscript-logs"
-Log_file=$("echo $0 | cut -d "." -f1")
+Log_file=$(echo $0 | cut -d "." -f1)
 Timestamp=$(date +%Y-%m-%d-%H-%M-%S)
 Log_File_Name="$Logs_Folder/Log_file-$Timestamp.log"
 
