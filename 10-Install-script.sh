@@ -15,6 +15,7 @@ then
  if [ $? -ne 0 ]
  then
   echo "Installing MYSQL is ... Failure"
+  exit 1
  else
   echo "Installing MYSQL is ... Success"
  fi
@@ -29,6 +30,7 @@ then
  if [ $? -ne 0 ]
  then 
   echo "Installing GIT is .... failure"
+  exit 1 
  else
   echo "Installing GIT is .... Success"
  fi 
