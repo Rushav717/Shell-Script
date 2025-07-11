@@ -4,24 +4,32 @@ USERID=$(id -u)
 
 if [ $USERID -ne 0 ]
 then
- echo "Error:: the user is not root user"
+ echo "error::You must have sudo access to execute the script"
  exit 1
 fi
 
-dnf install mysql -y
+dnf list installed mysql
 if [ $? -ne 0 ]
 then
- echo "MYSQL installation is ... Failure"
- exit 1
+ dnf install mysql -y
+ if [ $? -ne 0 ]
+ then
+  echo "Installing MYSQL is ... Failure"
+ else
+  echo "Installing MYSQL is ... Success"
+ fi
 else
- echo "MySQL installation is ... Success"
-fi
+ echo "Git is already installed"
 
-dnf install git -y
+dnf list installed git
 if [ $? -ne 0 ]
 then
- echo "Git installation is ... Failure"
- exit 1
+ dnf install git -y
+ if [ $? -ne 0 ]
+ then 
+  echo "Installing GIT is .... failure"
+ else
+  echo "Installing GIT is .... Success"
+ fi 
 else
- echo "Git installation is ... Success"
-fi
+ echo "Git is already installed"
