@@ -20,7 +20,7 @@ then
   echo "Installing MYSQL is ... Success"
  fi
 else
- echo "MYSQL is already installed"
+ echo "MYSQL is already .... installed"
 fi
 
 dnf list installed git
@@ -35,5 +35,5 @@ then
   echo "Installing GIT is .... Success"
  fi 
 else
- echo "Git is already installed"
+ echo "Git is already .... installed"
 fi
