@@ -5,6 +5,7 @@ USERID=$(id -u)
 R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
+N="\e[0m"
 
 Logs_Folder="/var/log/shellscript-logs"
 Log_file=$(echo $0 | cut -d "." -f1)
@@ -38,6 +39,6 @@ do
      dnf install $package -y &>> $Log_File_Name
      VALIDATE $? "$package"
     else
-     echo -e "$package is already ... $Y Installed"
+     echo -e "$package is already ... $Y Installed $N"
     fi
 done
