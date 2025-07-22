@@ -43,4 +43,5 @@ echo "logfiles to be deleted: $LOGFILES_TO_DELETE"
 while read -r file
 do
  echo "deleting files: $file"
+ rm -rf $file
 done <<< $LOGFILES_TO_DELETE
