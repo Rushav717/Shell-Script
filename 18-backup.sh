@@ -40,12 +40,12 @@ echo "script started executing at:: $TIMESTAMP" &>>$LOG_FILE_NAME
 
 if [ ! -d $SOURCE_DIR ]
 then
- echo "SOURCE_DIR Does not exist... Please check"
- exit 1
+ echo "$SOURCE_DIR Does not exist... Please check"
+ exit1
 fi
 
 if [ ! -d $DEST_DIR ]
 then
- echo "DEST_DIR Does not exist .... Please check"
+ echo "$DEST_DIR Does not exist .... Please check"
  exit 1
 fi
