@@ -49,3 +49,6 @@ then
  echo "$DEST_DIR Does not exist .... Please check"
  exit 1
 fi
+
+FILES=(find $SOURCE_DIR -name "*.log" -mtime +$DAYS)
+echo "Files are : $FILES"
