@@ -2,6 +2,7 @@
 
 DISK_USAGE=$(df -hT | grep xfs)
 DISK_THRESHOLD=5
+MSG=""
 
 while read -r line
 do
