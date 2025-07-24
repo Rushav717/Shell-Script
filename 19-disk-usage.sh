@@ -2,7 +2,7 @@
 
 DISK_USAGE=$(df -hT | grep xfs)
 DISK_THRESHOLD=5
-MSG=" "
+MSG=""
 
 while read -r line
 do
@@ -14,5 +14,7 @@ do
   MSG="High disk usage on partition : $PARTITION  usage is: $USAGE"
  fi
 done <<< $DISK_USAGE
+
+echo "message is: $MSG"
 
 
